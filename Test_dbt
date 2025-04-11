@@ -1,0 +1,8 @@
+select
+    id,
+    author,
+    date(date) as review_date,  -- Extracts just the date without the timestamp
+    rating,
+    coalesce(title, 'NA') as title,
+    coalesce(content, 'NA') as content
+from `ethereal-aria-456307-i6.trustpilot_reviews.pk_reviews`
